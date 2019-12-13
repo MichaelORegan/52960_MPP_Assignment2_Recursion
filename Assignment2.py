@@ -1,3 +1,5 @@
+#1. Sum of an array Given an array of numbers return it’s sum (all the numbers added together).
+
 # https://www.geeksforgeeks.org/sum-array-elements-using-recursion/
 # amended code from above website
 
@@ -21,6 +23,7 @@ print(sum_array(b))
 c = [10]
 print(sum_array(c))
 
+# 2. Product of an array Given an array of numbers return it’s product (all the numbers multiplied together).
 
 # ammended from sum_array_recursion
 
@@ -45,6 +48,7 @@ print(recursive_product(b))
 c = [10]
 print(recursive_product(c))
 
+# 3. Remove all odd numbers Given an array of numbers return an array with all the odd numbers removed.
 
 #https://stackoverflow.com/questions/51199082/typeerror-can-only-concatenate-list-not-nonetype-to-list
 #define function and pass array through function
@@ -64,6 +68,8 @@ n = [1,2,3,4,5,6,7,8,9,10]
 print(remove_odd(n))
 
 
+# 4. Remove all even numbers Given an array of numbers return an array with all the even numbers removed.
+
 # amended from odd_numbers_recursion.py
 #define function and pass array through function
 def remove_even(n):
@@ -82,6 +88,8 @@ n = [1,2,3,4,5,6,7,8,9,10]
 print(remove_even(n))
 
 
+# 5. Replace a given character with ’*’ Given a string, and a character to replace, return a string where each occurance of the character is replaced with ’*’.
+
 # https://stackoverflow.com/questions/38731503/recursively-replace-characters-in-string-using-python
 
 def replacechar(string, char, replace):
@@ -94,12 +102,7 @@ def replacechar(string, char, replace):
 print(replacechar('Missisippi', 'i', '*'))
 
 
-
-
-
-
-
-
+# # 6. Find index in array for item. Given an array, and an element to search for return the index of the element in the array or -1 if the element is not present in the array.
 
 # https://stackoverflow.com/questions/28056906/how-to-split-up-123456789-into-individual-numbers-using-python
 # define function that passes in a number
@@ -117,6 +120,26 @@ print(sum_digits(10))
 print(sum_digits(123456789))
 
 
+# 7. Sum of Digits Given a whole, number such as 23, return the sum of the digits in the number i.e. 2 + 3 = 5. For this would be useful to convert the number to a string then break it apart into digits.
+
+# https://stackoverflow.com/questions/28056906/how-to-split-up-123456789-into-individual-numbers-using-python
+# define function that passes in a number
+def sum_digits(num):
+# base case, if single digit return the number
+    if num <= 9:
+        return num
+    else:
+# modulus of any number by 10 is the right most digit
+        return num%10 + sum_digits(num//10)
+
+print(sum_digits(15))
+print(sum_digits(8))
+print(sum_digits(10))
+print(sum_digits(123456789))
+
+
+# 8. Print an array Given an array of integers prints all the elements one per line. This is a little bit diﬀerent as there is no need for a ’return’ statement just to print and recurse.
+
 # define the function and pass an array to it
 def print_array(n):
 # setting a base case when nothing in the array return True
@@ -132,3 +155,20 @@ def print_array(n):
 a = (1,2,3,4,5)
 # call to the function
 print_array(a)
+
+
+# 9. Find the minimum element in an array of integers. You can carry some extra information through method arguments such as minimum value.
+
+
+def min_int(n):
+    if len(n) == 1:
+        return n[0]
+    else:
+        return min(n[0], min_int(n[1:]))
+
+a = (1, 3, 4, 2, 5, 6)
+
+print(min_int(a))
+
+b = (2,3,4,5,6,1)
+print(min_int(b))

@@ -1,3 +1,5 @@
+# 2. Product of an array Given an array of numbers return it’s product (all the numbers multiplied together).
+
 # ammended from sum_array_recursion
 
 # defining the function

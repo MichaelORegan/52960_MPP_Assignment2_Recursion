@@ -1,3 +1,5 @@
+# 3. Remove all odd numbers Given an array of numbers return an array with all the odd numbers removed.
+
 #https://stackoverflow.com/questions/51199082/typeerror-can-only-concatenate-list-not-nonetype-to-list
 #define function and pass array through function
 def remove_odd(n):

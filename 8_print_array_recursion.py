@@ -1,3 +1,5 @@
+# 8. Print an array Given an array of integers prints all the elements one per line. This is a little bit diﬀerent as there is no need for a ’return’ statement just to print and recurse.
+
 # define the function and pass an array to it
 def print_array(n):
 # setting a base case when nothing in the array return True

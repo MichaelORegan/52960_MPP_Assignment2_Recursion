@@ -1,3 +1,5 @@
+# 5. Replace a given character with ’*’ Given a string, and a character to replace, return a string where each occurance of the character is replaced with ’*’.
+
 # https://stackoverflow.com/questions/38731503/recursively-replace-characters-in-string-using-python
 
 def replacechar(string, char, replace):

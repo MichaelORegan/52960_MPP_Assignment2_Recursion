@@ -1,3 +1,5 @@
+#1. Sum of an array Given an array of numbers return it’s sum (all the numbers added together).
+
 # https://www.geeksforgeeks.org/sum-array-elements-using-recursion/
 # amended code from above website
 
