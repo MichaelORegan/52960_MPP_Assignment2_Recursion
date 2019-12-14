@@ -1,16 +1,16 @@
-# # 6. Find index in array for item. Given an array, and an element to search for return the index of the element in the array or -1 if the element is not present in the array.
+# 6. Find index in array for item. Given an array, and an element to search for return the index of the element in the array or -1 if the element is not present in the array.
 
-# https://stackoverflow.com/questions/28056906/how-to-split-up-123456789-into-individual-numbers-using-python
-# define function that passes in a number
-def sum_digits(num):
-# base case, if single digit return the number
-    if num <= 9:
-        return num
+# define function with an array the number you want to find the index of and the starting index
+def find_index(n, number, index):
+# index starts at 0 if first position of the array is the number return 0
+    if n[0] == number:
+        return index
     else:
-# modulus of any number by 10 is the right most digit
-        return num%10 + sum_digits(num//10)
+# counting up the index as you move through the array
+        index = index +1
+        return find_index(n[1:], number, index)
 
-print(sum_digits(15))
-print(sum_digits(8))
-print(sum_digits(10))
-print(sum_digits(123456789))
+# simple array
+a = [1, 3, 4, 2, 5, 6]
+# print statement, index starts at 0
+print(find_index(a, 6, 0))

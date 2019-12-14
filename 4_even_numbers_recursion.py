@@ -1,6 +1,7 @@
 # 4. Remove all even numbers Given an array of numbers return an array with all the even numbers removed.
 
 # amended from odd_numbers_recursion.py
+
 #define function and pass array through function
 def remove_even(n):
 # if not an array return empty array
